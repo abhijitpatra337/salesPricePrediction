@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 style="font-family: 'Playfair Display', serif;font-weight: 900; font-size: 2.5em; letter-spacing: 2px; border-bottom: 2px solid #000; padding-bottom: 5px; border-radius: 10px; background-color: #f8f8f8; display: inline-block; padding: 10px; margin: 20px 0; color: #006400;">
+          PREDICTION RESULT
+        </h1>
+
+        <div class="prediction-section">
+            <h2>Prediction Result:</h2>
+            <p id="predictedSales">Predicted Quarterly Sales($): <span id="predictionResult" style="color: inherit;">{{ prediction_result }}</span></p>
+             <!--Visualization Button -->
+            <button class="visualization-button" onclick="visualizationRedirection()">Visualize</button>
+        </div>
+
+        <!-- Display the Input Features -->
+        <div class="input-section">
+            <div class="input-feature"><strong>Item Visibility:</strong><br>{{ input_features.get('item_visibility', 'N/A') }}</div>
+            <div class="input-feature"><strong>Item MRP($):</strong><br>{{ input_features.get('item_mrp', 'N/A') }}</div>
+            <div class="input-feature"><strong>Item Identifier:</strong><br>{{ input_features.get('item_identifier', 'N/A') }}</div>
+            <div class="input-feature"><strong>Item Type:</strong><br>{{ input_features.get('item_type', 'N/A') }}</div>
+            <div class="input-feature"><strong>Item Fat Content:</strong><br>{{ input_features.get('item_fat_content', 'N/A') }}</div>
+            <div class="input-feature"><strong>Outlet Size:</strong><br>{{ input_features.get('outlet_size', 'N/A') }}</div>
+            <div class="input-feature"><strong>Outlet location:</strong><br>{{ input_features.get('outlet_location', 'N/A') }}</div>
+            <div class="input-feature"><strong>Outlet establishment year:</strong><br>{{ input_features.get('outlet_establishment_year', 'N/A') }}</div>
+            <div class="input-feature"><strong>Outlet type:</strong><br>{{ input_features.get('outlet_type', 'N/A') }}</div>
+        </div>
+    </div>
+    <script src="/static/js/visualization.js"></script>
+    <script>
+         var prediction_result = parseFloat(document.getElementById("predictionResult").textContent);
+         document.getElementById("predictionResult").textContent = prediction_result.toFixed(2);
+    </script>
+</body>
+</html>

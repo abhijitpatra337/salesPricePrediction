@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualization Page</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 style="font-family: 'Playfair Display', serif;font-weight: 900; font-size: 2.5em; letter-spacing: 2px; border-bottom: 2px solid #000; padding-bottom: 5px; border-radius: 10px; background-color: #f8f8f8; display: inline-block; padding: 10px; margin: 20px 0; color: #006400;">
+            SALES VISUALIZATION
+        </h1>
+
+        <!-- plot-1-->
+        <div class="image-section">
+            <p style="font-weight: bold; font-size: 1.2em; color: #006400;">
+                Violin plot which indicates the sales trend in different outlet types and the outlet size:
+            <span class="info-tab" onclick="openPopup('collapsibleBox1')" style="color: red;"> (more info..)</span>
+            </p>
+            <div id="collapsibleBox1" class="popup">
+                <span class="popup-close" onclick="closePopup('collapsibleBox1')">X</span>
+                This plot gives you a great insight on the item outlet sales past trends for different
+                types of supermarkets like Supermarket Type1, Supermarket Type2, Supermarket Type3, Grocery
+                Store and for each supermarket type, we have provided sales details of each subcategory whether
+                the size of the supermarket is small, medium or large. Looking at the plots, this could answer
+                very specific questions which might arise in your minds regarding the selection of supermarket
+                type and the size of supermarket to set up in a particular city. This will also prevent you from
+                making the wrong decision of setting up stores in locations where the sales have plummeted in the past years.
+            </div>
+            <img src="/static/images/violin_plot.png" alt="Image 1">
+        </div>
+
+
+        <!-- plot-2 -->
+        <div class="image-section">
+            <p style="font-weight: bold; font-size: 1.2em; color: #006400;">
+                Previous sales trend of different items in the supermarket:
+            <span class="info-tab" onclick="openPopup('collapsibleBox2')" style="color: red;"> (more info..)</span>
+            </p>
+            <div id="collapsibleBox2" class="popup">
+                <span class="popup-close" onclick="closePopup('collapsibleBox2')">X</span>
+                This plot shown above has equal importance in providing you details of the past trends on the other
+                important aspect of supermarket setup, which is the products to include  and which products not in
+                the supermarket. This information is provided in the plot showing detailed sales of each and every
+                product in the past, henceforth will impact the big decision which you need to make on the  inclusiveness of a particular product.
+            </div>
+            <img src="/static/images/itemtype_vs_sales.png" alt="Image 1">
+        </div>
+
+        <!-- plot-3 -->
+        <div class="image-section">
+            <p style="font-weight: bold; font-size: 1.2em; color: #006400;">
+                Previous sales trend of different items in the supermarket:
+            <span class="info-tab" onclick="openPopup('collapsibleBox3')" style="color: red;"> (more info..)</span>
+            </p>
+            <div id="collapsibleBox3" class="popup">
+                <span class="popup-close" onclick="closePopup('collapsibleBox3')">X</span>
+                This plot provides you with the big picture of the complete setup, where it provides details of the feature
+                importance bars. These bars would be really beneficial to you when there are any clashes among which factor/feature
+                to be given more importance and which one to give less importance and get to the middle ground with certain trade
+                offs so as to reach the ultimate goal of maximizing the outlet profits. As you can see from the plot that, according
+                to our model, Item Visibility and Item MRP, holds the spot of highest importance in deciding the final sales piece of a particular product.
+            </div>
+            <img src="/static/images/feature_importance.png" alt="Image 1">
+        </div>
+    </div>
+    <script src="/static/js/visualization.js"></script>
+</body>
+</html>

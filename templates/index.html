@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sales Price Predictor</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Cinzel', sans-serif;
+        }
+    </style>
+</head>
+
+<body style="background-image: url('/static/images/main_background.avif'); background-size: cover; background-position: center;">
+    <div class="container">
+        <h1 style="font-family: 'Playfair Display', serif; font-weight: 900; font-size: 2.5em; letter-spacing: 2px; border-bottom: 2px solid #000; padding-bottom: 5px; border-radius: 10px; background-color: #f8f8f8; display: inline-block; padding: 10px; margin: 20px 0; color: #006400;">
+          BIG MART SALES PREDICTION
+        </h1>
+
+        <!-- Separator -->
+        <div class="separator1"></div>
+        <h2>Item Details: </h2>
+
+        <!-- UI Elements -->
+        <div class="module-input">
+            <label for="itemVisibility">Item Visibility (0-1):</label>
+            <input type="number" id="itemVisibility" step="0.01" min="0" max="1" placeholder="Item Visibility">
+
+            <label for="itemMRP">Item MRP:</label>
+            <input type="text" id="itemMRP" placeholder="Item MRP in $">
+
+            <label for="itemIdentifier">Item Identifier:</label>
+            <select id="itemIdentifier" onchange="updateItemType()">
+                <option value="food">Food</option>
+                <option value="drinks">Drinks</option>
+                <option value="non-consumables">Non-consumables</option>
+            </select>
+
+            <label for="itemType">Item Type:</label>
+            <select id="itemType">
+                <option value="default" selected disabled>Select an item type</option>
+                <option value="Baking Goods">Baking Goods</option>
+                <option value="Breads">Breads</option>
+                <option value="Breakfast">Breakfast</option>
+                <option value="Canned">Canned</option>
+                <option value="Dairy">Dairy</option>
+                <option value="Frozen Foods">Frozen Foods</option>
+                <option value="Fruits and Vegetables">Fruits and Vegetables</option>
+                <option value="Meat">Meat</option>
+                <option value="Seafood">Seafood</option>
+                <option value="Snack Foods">Snack Foods</option>
+                <option value="Starchy Foods">Starchy Foods</option>
+            </select>
+
+            <label for="itemFatContent">Item Fat Content:</label>
+            <select id="itemFatContent">
+                <option value="Low Fat">Low</option>
+                <option value="Regular">Regular</option>
+            </select>
+        </div>
+             <!-- Separator -->
+        <div class="separator2"></div>
+        <h2>Outlet Details: </h2>
+
+
+        <div class="module-input">
+            <label for="outletSize">Outlet Size:</label>
+            <select id="outletSize">
+                <option value="Small">Small</option>
+                <option value="Medium">Medium</option>
+                <option value="High">High</option>
+            </select>
+
+            <label for="outletLocation">Outlet Location City:</label>
+            <select id="outletLocation">
+                <option value="Tier 1">Tier-1</option>
+                <option value="Tier 2">Tier-2</option>
+                <option value="Tier 3">Tier-3</option>
+            </select>
+
+            <label for="outletEstablishmentYear">Outlet Establishment Year:</label>
+            <input type="text" id="outletEstablishmentYear" placeholder="Establishment Year">
+
+            <label for="outletType">Outlet Type:</label>
+            <select id="outletType">
+                <option value="Supermarket Type1">Supermarket-1</option>
+                <option value="Supermarket Type2">Supermarket-2</option>
+                <option value="Grocery Store">Grocery Store</option>
+            </select>
+        </div>
+
+        <!-- Predict Button -->
+        <button onclick="predictPrice()">Predict</button>
+
+    </div>
+
+    <script src="/static/js/PredictSalesPrice.js"></script>
+    <script src="/static/js/ItemType.js"></script>
+</body>
+</html>

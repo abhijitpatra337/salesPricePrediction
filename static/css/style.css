@@ -1,0 +1,167 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f8f8;
+    margin: 0;
+    padding: 0;
+    background-image: url('/static/images/main_background.avif');
+    background-size: cover;
+    background-position: center;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+#predictionResult {
+    margin-top: 20px;
+    font-weight: bold;
+    color: #e74c3c;
+}
+
+.separator1,
+.separator2 {
+    width: 100%;
+    border-top: 2px solid #ddd;
+    margin: 20px 0;
+}
+
+h2 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+#predictedSales {
+   background-color: rgba(231, 76, 60, 0.9);
+    color: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    display: inline-block;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.input-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.input-feature {
+    background-color: rgba(174, 217, 224, 0.5);
+    color: #333;
+    padding: 10px;
+    border-radius: 50%;
+    margin: 10px;
+    text-align: center;
+    min-width: 100px;
+}
+
+.visualization-button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.image-section {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.image-section img {
+    max-width: 100%; /* images width adjustments according to container width */
+    height: auto; /*  aspect ratio */
+    border-radius: 15px;
+    margin-bottom: 10px;
+    border: 4px solid #006400;
+}
+
+.image-section p {
+    margin-bottom: 20px;
+    border-radius: 0 0 15px 15px;
+}
+.image-section:hover p {
+            opacity: 1;
+}
+.header {
+    font-family: 'Playfair Display', serif;
+    font-weight: 900;
+    font-size: 2.5em;
+    letter-spacing: 2px;
+    border-bottom: 2px solid #000;
+    border-radius: 10px;
+    background-color: #f8f8f8;
+    display: inline-block;
+    padding: 10px;
+    margin: 20px 0;
+    color: #006400;
+}
+.info-tab {
+    cursor: pointer;
+    color: #006400;
+    text-decoration: underline;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: #f8f8f8;
+    border: 1px solid #006400;
+    border-radius: 5px;
+    z-index: 1;
+}
+
+.popup-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
